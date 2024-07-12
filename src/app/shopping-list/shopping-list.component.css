@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 html, body{
   margin: 0;
   height: 100%;
@@ -14,22 +17,46 @@ html, body{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.container-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  gap: 40px;
+}
+
 h1 {
   text-align: center;
 }
 
 form {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+
 }
 
 input {
+  padding: 10px;
   flex: 1;
-  margin-right: 10px;
+  background-color: #d8d8d8;
+  /* border-radius: 8px 0 0 8px; */
+  border: none;
 }
 
-button {
-  margin: 5px 0;
+.container-search-button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  padding: 12px 16px ;
+  background-color: #076DB7;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-weight: 600;
 }
 
 ul {
@@ -41,20 +68,43 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 15px 5px;
+  border-color: #e5e5e5;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 2px;
 }
 
-button {
-  background: none;
-  border: none;
-  color: #007bff;
-  cursor: pointer;
+.li-content {
+  display: flex;
+  font-family: "Montserrat";
+  font-weight: 600;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.li-button {
+  display: flex;
+  background-color: white;
+  gap: 8px;
+}
+button{
+  background-color: white;
 }
 
 button:hover {
   color: #0056b3;
 }
 
+.button-remove:hover {
+  color: red;
+}
 button:disabled {
   cursor: not-allowed;
 }
+
+.container-title{
+  display: flex;
+  font-family:"Montserrat";
+}
+

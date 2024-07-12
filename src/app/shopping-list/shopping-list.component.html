@@ -1,27 +1,33 @@
 
-    <div class="container">
-      <h1>Lista de Compras</h1>
-      <form (submit)="$event.preventDefault(); addItem()">
-        <input type="text" [(ngModel)]="newItemText" name="newItemText" placeholder="Ex: Ovos">
-        <button type="submit">Adicionar</button>
-      </form>
+<div class="container">
+  <div class="container-content">
+    <div class="container-title">
+      <h1>LISTA DE COMPRAS</h1>
+    </div>
+    <form (submit)="$event.preventDefault(); addItem()">
+      <input type="text" [(ngModel)]="newItemText" name="newItemText" placeholder="Ex: Ovos">
+      <button class="container-search-button" type="submit">ADICIONAR</button>
+    </form>
 
-      <ul *ngIf="items.length > 0">
-        <li *ngFor="let item of items">
-          {{item.name}} x {{item.quantity}}
+    <ul *ngIf="items.length > 0">
+      <li *ngFor="let item of items" class="li-content">
+        {{item.name}} x {{item.quantity}}
+        <div class="li-button">
           <button (click)="decreaseQuantity(item)">
             <i class="fi fi-rs-minuss"></i>
           </button>
           <button (click)="increaseQuantity(item)">
             <i class="fi fi-rs-plus"></i>
           </button>
-          <button (click)="removeItem(item)">
+          <button class="button-remove" (click)="removeItem(item)">
             <i class="fi fi-rs-trash"></i>
           </button>
-        </li>
-      </ul>
+        </div>
+      </li>
+    </ul>
 
-      <p *ngIf="items.length === 0">Não há itens na lista.</p>
-      <button (click)="clearList()" *ngIf="items.length > 0">Limpar Lista</button>
-    </div>
+    <p *ngIf="items.length === 0">Não há itens na lista.</p>
+    <button class="button-remove" (click)="clearList()" *ngIf="items.length > 0">Limpar Lista</button>
+  </div>
+</div>
 
