@@ -17,7 +17,7 @@
 }
 
 .button-with-icon {
-  padding-left: 40px;
+  gap: 10px;
 }
 
 .button-without-icon {

@@ -10,6 +10,15 @@ class="custom-button"
 [style.borderRadius] = "borderRadius"
 [ngClass]="{'button-with-icon': hasIcon, 'button-without-icon': !hasIcon}"
 >
+
+<i
+*ngIf="iconName"
+[class]="iconName"
+class="fi "></i>
+<p>
+
+
   <ng-content></ng-content>
+</p>
 </button>
 

@@ -16,4 +16,5 @@ export class CustomButtonComponent {
 @Input() align: "none"|"start"|"center"|"end" = "none"
 @Input() type:"none"|"primary"|"secondary" = "none"
 @Input() hasIcon: boolean = false;
+@Input() iconName = ""
 }
