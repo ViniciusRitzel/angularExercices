@@ -1,0 +1,15 @@
+<button
+class="custom-button"
+[class] ="type"
+[class] = "align"
+[style.color] = "color"
+[style.backgroundColor] = "background"
+[style.fontFamily]="fontFamily"
+[style.fontStyle]="fontStyle"
+[style.fontSize]="fontSize"
+[style.borderRadius] = "borderRadius"
+[ngClass]="{'button-with-icon': hasIcon, 'button-without-icon': !hasIcon}"
+>
+  <ng-content></ng-content>
+</button>
+

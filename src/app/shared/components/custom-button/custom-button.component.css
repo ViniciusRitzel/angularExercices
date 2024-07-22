@@ -1,0 +1,33 @@
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+}
+
+.primary {
+  color: red;
+  background-color: yellow;
+}
+
+.secondary {
+  color: purple;
+  background-color: blue;
+}
+
+.button-with-icon {
+  padding-left: 40px;
+}
+
+.button-without-icon {
+  padding-left: 20px;
+}
+
+.custom-button:hover {
+  opacity: 0.4;
+}
+
+:host(){
+  width: fit-content;
+}

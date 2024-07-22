@@ -1,11 +1,9 @@
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+ body {
   display: flex;
+  flex-direction: column;
   background-color: #d8d8d8;
 }
+
 *{
   margin:0;
   border:none;
@@ -13,8 +11,4 @@ html, body {
   box-sizing: border-box;
   outline: none;
 }
-app-root {
-  width: 100%;
-  /* height: 100vh; */
-  /* background-color: #d8d8d8; */
-}
+

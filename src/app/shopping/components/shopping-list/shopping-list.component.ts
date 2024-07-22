@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 interface ShoppingItem {
   name: string;
@@ -13,12 +13,14 @@ interface ShoppingItem {
 
 export class ShoppingListComponent {
   items: ShoppingItem[] = [];
-  newItemText: string = '';
 
-  addItem() {
-    if (this.newItemText.trim()) {
-      this.items.push({ name: this.newItemText, quantity: 1 });
-      this.newItemText = '';
+
+  
+
+  addItem(value: string) {
+    if (value.trim()) {
+      this.items.push({ name: value, quantity: 1 });
+      value = '';
     }
   }
 
