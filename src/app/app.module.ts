@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingModule } from './shopping/shopping.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingListComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ShoppingModule,
     FormsModule
   ],
   providers: [],

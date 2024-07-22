@@ -1,0 +1,20 @@
+<form>
+<input
+[placeholder]="placeHolder"
+
+[class]="type"
+#newItem
+>
+<app-custom-button
+[hasIcon]=true
+color="white"
+background="#076db7"
+fontFamily="'Montserrat', sans-serif"
+fontStyle="italic"
+fontSize="16px"
+(click)="handleSearch(newItem.value)"
+>
+ADICIONAR
+</app-custom-button>
+
+</form>
