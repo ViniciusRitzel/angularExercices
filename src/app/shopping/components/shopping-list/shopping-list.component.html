@@ -4,44 +4,23 @@
     <div class="container-title">
       <h1>LISTA DE COMPRAS</h1>
     </div>
-   <!--  <form (submit)="$event.preventDefault(); addItem()">
-      <app-search-input
-      type="primary"
-      placeHolder="Ex: Ovos"
-      ></app-search-input>
-      <button class="container-search-button" type="submit">ADICIONAR</button>
-    </form> -->
-    <!-- <form class="form" >
-      <app-search-input
-      ></app-search-input>
-      <button class="container-search-button" type="submit">ADICIONAR</button>
-
-    </form> -->
 
     <app-search-input
-    (textEmitter)="addItem($event)"
+    (textEmitter)="shoppingList.addItem($event)"
     placeHolder="Ex: Ovos">
     </app-search-input>
 
-    <ul *ngIf="items.length > 0">
-      <li *ngFor="let item of items" class="li-content">
-        {{item.name}} x {{item.quantity}}
-        <div class="li-button">
-          <button (click)="decreaseQuantity(item)">
-            <i class="fi fi-rs-minuss"></i>
-          </button>
-          <button (click)="increaseQuantity(item)">
-            <i class="fi fi-rs-plus"></i>
-          </button>
-          <button class="button-remove" (click)="removeItem(item)">
-            <i class="fi fi-rs-trash"></i>
-          </button>
-        </div>
-      </li>
+    <ul *ngIf="shoppingList.items.length > 0">
+      <app-shopping-item
+      *ngFor="let item of shoppingList.items"
+      [item]="item"
+      (methodEmitter)="shoppingList.removeItem(item)"
+    >
+    </app-shopping-item>
     </ul>
 
-    <p *ngIf="items.length === 0">Não há itens na lista.</p>
-    <button class="button-remove" (click)="clearList()" *ngIf="items.length > 0">Limpar Lista</button>
+    <p *ngIf="shoppingList.items.length === 0">Não há itens na lista.</p>
+    <button class="button-remove" (click)="shoppingList.clearList()" *ngIf="shoppingList.items.length > 0">Limpar Lista</button>
   </div>
 </div>
 

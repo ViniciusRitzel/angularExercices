@@ -4,6 +4,9 @@ import { SearchInputComponent } from './components/search-input/search-input.com
 import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 import { CustomFormComponent } from './components/custom-form/custom-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShoppingItem } from './lib/models/shopping-item';
+import { ShoppingList } from "./lib/models/shopping-list";
+import { ShoppingItemComponent } from './components/shopping-item/shopping-item.component';
 
 
 
@@ -11,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     SearchInputComponent,
     CustomButtonComponent,
-    CustomFormComponent
+    CustomFormComponent,
+    ShoppingItemComponent,
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     SearchInputComponent,
-    CustomButtonComponent
+    CustomButtonComponent,
+    ShoppingItemComponent
   ]
 })
 export class SharedModule { }

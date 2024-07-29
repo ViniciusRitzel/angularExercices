@@ -17,4 +17,5 @@ export class CustomButtonComponent {
 @Input() type:"none"|"primary"|"secondary" = "none"
 @Input() hasIcon: boolean = false;
 @Input() iconName = ""
+@Input() isDisabled: boolean = false;
 }

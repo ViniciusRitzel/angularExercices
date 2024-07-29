@@ -1,4 +1,5 @@
 <button
+[disabled]="isDisabled"
 class="custom-button"
 [class] ="type"
 [class] = "align"
@@ -9,6 +10,7 @@ class="custom-button"
 [style.fontSize]="fontSize"
 [style.borderRadius] = "borderRadius"
 [ngClass]="{'button-with-icon': hasIcon, 'button-without-icon': !hasIcon}"
+
 >
 
 <i
@@ -16,8 +18,6 @@ class="custom-button"
 [class]="iconName"
 class="fi "></i>
 <p>
-
-
   <ng-content></ng-content>
 </p>
 </button>

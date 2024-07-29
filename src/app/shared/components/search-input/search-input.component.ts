@@ -19,7 +19,10 @@ export class SearchInputComponent {
 
 handleSearch(value: string){
   this.textEmitter.emit(value);
+  // console.log(value)
 }
-
+inputChange(value: string) {
+  console.log(value)
+}
 // @Input() flex = ""
 }

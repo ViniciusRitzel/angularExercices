@@ -1,0 +1,42 @@
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  border-color: #e5e5e5;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 2px;
+}
+
+.shopping-item{
+  display: flex;
+  font-family: "Montserrat";
+  font-weight: 600;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.shopping-button{
+  display: flex;
+  background-color: white;
+  gap: 8px;
+}
+button{
+  background-color: white;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+button:hover {
+  color: #0056b3;
+  cursor: pointer;
+}
+
+.button-remove:hover {
+  color: red;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}

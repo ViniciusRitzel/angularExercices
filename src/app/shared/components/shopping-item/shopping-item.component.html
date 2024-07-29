@@ -1,0 +1,14 @@
+<li class="shopping-item">
+  {{item.name}} x {{item.quantity}}
+  <div class="shopping-button">
+    <button (click)="handleDecrease()">
+      <i class="fi fi-rs-minuss"></i>
+    </button>
+    <button (click)="item.increaseQuantity()">
+      <i class="fi fi-rs-plus"></i>
+    </button>
+    <button class="button-remove" (click)="handleMethod()">
+      <i class="fi fi-rs-trash"></i>
+    </button>
+  </div>
+</li>

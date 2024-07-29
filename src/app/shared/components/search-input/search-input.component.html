@@ -1,18 +1,20 @@
-<form>
+<form (submit)="$event.preventDefault()" >
 <input
-[placeholder]="placeHolder"
-
-[class]="type"
 #newItem
->
+type="text"
+(input)="inputChange(newItem.value)"
+[placeholder]="placeHolder"
+[class]="type"
+/>
 <app-custom-button
 color="white"
 [hasIcon]="true"
-iconName="fi-brands-github"
+iconName="fi-br-plus"
 background="#076db7"
 fontFamily="'Montserrat', sans-serif"
 fontStyle="italic"
 fontSize="16px"
+[isDisabled]="!newItem.value"
 (click)="handleSearch(newItem.value)"
 >
 ADICIONAR
